@@ -1,0 +1,4 @@
+.gradients {
+    background: -webkit- linear-gradient (0deg, #9ad15e 0%, #31ble7 100%);
+    background: -moz- linear-gradient (90deg, #9ad15e 0%, #31ble7 100%);
+}
