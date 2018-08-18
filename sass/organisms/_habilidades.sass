@@ -23,13 +23,12 @@
 					//color: $preto
 
 	@for $i from 0 through 10
-		li.habilidade-#{$i}
-			.barra span
-				width: 10% * $i
-
+			li.habilidade-#{$i}
+				.barra span
+					width: 10% * $i
 	.barra
-		background-color: $cinza-claro
 		//+gradient(90deg, $preto -90%, $cinza-claro)
+		background-color: $cinza-claro
 		+border-radius(120px)
 		display: block
 		width: 100%
