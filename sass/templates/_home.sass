@@ -10,3 +10,61 @@ header
 		attachment: fixed
 		size: cover
 		//size: 200px
+
+//minhas alterações
+/* CONTINUAR EM OUTRO MOMENTO
+.itens
+	//position: absolute
+	//z-index: 2
+	//width: 100% 
+	//bottom: 100%
+		
+	.foto
+		line-height: 180px
+		height: 183px
+		width: 183px
+		//background-image: radial-gradient(ellipse farthest-corner at 50% 50%, $azul, $branco 75%);
+		//border: solid 90px $laranja
+		border-radius: 1000px
+		
+
+		//z-index: 1
+		//position: relative
+		//left: 0
+		//display: block*/
+
+.icone-lapis
+	+opacity(.5)
+	&:hover
+		+opacity(1)
+		transform: rotate(-45deg)
+		transition: .2s all ease-in-out
+		.fas.fa-pencil-alt
+			color: $verde
+			transform: rotate(400deg)
+
+.icone-codigo:hover
+		+opacity(.5)
+		transform: rotate(45deg)
+		transition: .2s all ease-in-out
+		.fas.fa-code
+			color: $azul
+			transform: rotate(315deg)
+
+.icone-coracao:hover
+	+opacity(.5)
+	transform: rotate(-45deg)
+	transition: .2s all ease-in-out
+	.fas.fa-heart
+		color: $laranja
+		transform: rotate(405deg)
+
+.icone-compartilhar
+	+opacity(.5)
+	&:hover
+		+opacity(1)
+		transform: rotate(45deg)
+		transition: .2s all ease-in-out
+		.fas.fa-share-alt
+			color: $preto
+			transform: rotate(315deg)
