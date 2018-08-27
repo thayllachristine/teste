@@ -10,89 +10,120 @@
 
     <!-- Controlador de cache, retirar quando acabar o desenvolvimento -->
     <meta http-equiv="Cache-Control" content="no-store" />
-
+    
 </head>
 <body>
-    <header>
-        <div class="container"> <!-- DIV CONTAINER -->
-            <div class="logo">
-                <a href="index.html">
-                    <img src="images/logo-tag-topo.svg" alt="Logo tag topo">
-                </a>
-            </div>
 
-            <div class="links">
-                <nav>
-                    <ul>
-                        <li><a href="index.html">Início</a></li>
-                        <li><a href="sobre.html">Sobre</a></li>
-                        <li><a href="portifolio.html">Portifolio</a></li>
-                        <li><a href="contato.html">Contato</a></li>
+    <nav class="menu-responsivo">
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="portifolio.html">Portifolio</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </nav>
+    
+    <div class="layout">
+        <header>
+            <div class="container"> <!-- DIV CONTAINER -->
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/logo-tag-topo.svg" alt="Logo tag topo">
+                    </a>
+                </div>
+
+                <div class="links">
+                    <nav>
+                        <ul>
+                            <li><a href="index.html">Início</a></li>
+                            <li><a href="sobre.html">Sobre</a></li>
+                            <li><a href="portifolio.html">Portifolio</a></li>
+                            <li><a href="contato.html">Contato</a></li>
+                        </ul>
+                    </nav>
+                    
+                    <a class="toggle" href="javascript:;">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </a>
+                    <ul class="social">
+                        <li>
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fab fa-github-alt"></i></a>
+                        </li>
                     </ul>
-                </nav>
-                <ul class="social">
-                    <li>
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fab fa-github-alt"></i></a>
-                    </li>
-                </ul>
-            </div>
+                </div>
 
-    <h1><strong>Thiago</strong> A. 
-<strong>Grzybowski</strong></h1>
+        <h1><strong>Thiago</strong> A. 
+    <strong>Grzybowski</strong></h1>
 
-            <p>Code // Share // Reboot</p>
-        </div> <!-- FIM DIV CONTAINER -->
-    </header>
+                <p>Code // Share // Reboot</p>
+            </div> <!-- FIM DIV CONTAINER -->
+        </header>
 
-    <main>
-        <section class="sobre">
-            <div class="container">
-                <div class="itens">
+        <main>
+            <section class="sobre">
+                <div class="container">
+                    <div class="itens">
 
-                    <!--<div class="borda"></div>-->
-                    <div class="foto">
-                        <img src="images/foto-tag-miolo.png" alt="Foto tag miolo">
+                        <!--<div class="borda"></div>-->
+                        <div class="foto">
+                            <img src="images/foto-tag-miolo.png" alt="Foto tag miolo">
+                        </div>
+
+                        <div class="icone-lapis">
+                            <i class="fas fa-pencil-alt"></i>
+                        </div>
+
+                        <div class="icone-codigo">
+                            <i class="fas fa-code"></i>
+                        </div>
+
+                        <div class="icone-coracao">
+                            <i class="fas fa-heart"></i>
+                        </div>
+
+                        <div class="icone-compartilhar">
+                            <i class="fas fa-share-alt"></i>
+                        </div>
                     </div>
+                    <div class="textos">
+                        <p><strong>Lorem ipsum dolor sit amet,</strong> consectetur adipisicing elit. Optio autem fugit, perspiciatis expedita suscipit vel doloremque ullam excepturi aperiam, quam. Odio necessitatibus debitis eligendi mollitia! Consequuntur, perferendis minima assumenda voluptas.
+                        </p>
 
-                    <div class="icone-lapis">
-                        <i class="fas fa-pencil-alt"></i>
-                    </div>
-
-                    <div class="icone-codigo">
-                        <i class="fas fa-code"></i>
-                    </div>
-
-                    <div class="icone-coracao">
-                        <i class="fas fa-heart"></i>
-                    </div>
-
-                    <div class="icone-compartilhar">
-                        <i class="fas fa-share-alt"></i>
+                        <a href="#" class="botao medio"><i class="fas fa-eye"></i> Continue Lendo </a>
                     </div>
                 </div>
-                <div class="textos">
-                    <p><strong>Lorem ipsum dolor sit amet,</strong> consectetur adipisicing elit. Optio autem fugit, perspiciatis expedita suscipit vel doloremque ullam excepturi aperiam, quam. Odio necessitatibus debitis eligendi mollitia! Consequuntur, perferendis minima assumenda voluptas.
-                    </p>
+            </section>
+        </main>
 
-                    <a href="#" class="botao medio"><i class="fas fa-eye"></i> Continue Lendo </a>
-                </div>
+
+        <footer>
+            <div class="logo-rodape">
+                <a href="index.html">
+                    <img src="images/logo-tag-rodape.svg" alt="Logo tag rodapé">
+                </a>
+
+                <p>2018 Todos os Direitos Reservados</p>
+                    <p>Altered by: Caio H. Santos</p>
             </div>
-        </section>
-    </main>
+        </footer>
+    </div>
 
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
 
-    <footer>
-        <div class="logo-rodape">
-            <a href="index.html">
-                <img src="images/logo-tag-rodape.svg" alt="Logo tag rodapé">
-            </a>
+    <script>
+        $(function(){
+            $('.toggle').click(function(){
+                $('.layout').toggleClass('ativo');
+                $('.menu-responsivo').toggleClass('ativo');
+                $(this).toggleClass('ativo');
+            });
+        });
+    </script>
 
-            <p>2018 Todos os Direitos Reservados</p>
-                <p>Altered by: Caio H. Santos</p>
-        </div>
-    </footer>
 </body>
 </html>
