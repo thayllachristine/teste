@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <title>Criando um site responsivo do começo ao fim</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="css/geral.css">
-    <link rel="stylesheet" href="css/plugins.css">
     <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/geral.css">
+    <link rel="stylesheet" href="bower_components/wow/css/libs/animate.css">
+    <link rel="stylesheet" href="css/plugins.css">
 
     <!-- Controlador de cache, retirar quando acabar o desenvolvimento -->
     <meta http-equiv="Cache-Control" content="no-store" />
@@ -26,14 +27,14 @@
     <div class="layout">
         <header>
             <div class="container"> <!-- DIV CONTAINER -->
-                <div class="logo">
+                <div class="logo wow slideInLeft" data-wow-duration="1s" data-wow-delay="1s">
                     <a href="index.html">
                         <img src="images/logo-tag-topo.svg" alt="Logo tag topo">
                     </a>
                 </div>
 
                 <div class="links">
-                    <nav>
+                    <nav class="wow fadeInDown" data-wow-duration="1s" data-wow-delay="2s">
                         <ul>
                             <li><a href="index.html">Início</a></li>
                             <li><a href="sobre.html">Sobre</a></li>
@@ -70,23 +71,23 @@
                     <div class="itens">
 
                         <!--<div class="borda"></div>-->
-                        <div class="foto">
+                        <div class="foto wow flip" data-wow-duration="1s" data-wow-delay="5s">
                             <img src="images/foto-tag-miolo.png" alt="Foto tag miolo">
                         </div>
 
-                        <div class="icone-lapis">
+                        <div class="icone-lapis wow flip" data-wow-duration="1s" data-wow-delay="1s">
                             <i class="fas fa-pencil-alt"></i>
                         </div>
 
-                        <div class="icone-codigo">
+                        <div class="icone-codigo wow flip" data-wow-duration="1s" data-wow-delay="2s">
                             <i class="fas fa-code"></i>
                         </div>
 
-                        <div class="icone-coracao">
+                        <div class="icone-coracao wow flip" data-wow-duration="1s" data-wow-delay="3s">
                             <i class="fas fa-heart"></i>
                         </div>
 
-                        <div class="icone-compartilhar">
+                        <div class="icone-compartilhar wow flip" data-wow-duration="1s" data-wow-delay="4s">
                             <i class="fas fa-share-alt"></i>
                         </div>
                     </div>
@@ -114,6 +115,7 @@
     </div>
 
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/wow/dist/wow.min.js"></script>
 
     <script>
         $(function(){
@@ -122,6 +124,7 @@
                 $('.menu-responsivo').toggleClass('ativo');
                 $(this).toggleClass('ativo');
             });
+            new WOW().init();
         });
     </script>
 
