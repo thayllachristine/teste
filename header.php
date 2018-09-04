@@ -2,12 +2,15 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Criando um site responsivo do começo ao fim</title>
+    <title><?php bloginfo('name'); echo " | "; bloginfo('description'); ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="css/<?php echo $style; ?>.css">
-    <link rel="stylesheet" href="css/geral.css">
-    <link rel="stylesheet" href="bower_components/wow/css/libs/animate.css">
-    <link rel="stylesheet" href="css/plugins.css">
+    
+    <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
+
+    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/<?php echo $style; ?>.css">
+    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/geral.css">
+    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/bower_components/wow/css/libs/animate.css">
+    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/plugins.css">
 
     <!-- Controlador de cache, retirar quando acabar o desenvolvimento -->
     <meta http-equiv="Cache-Control" content="no-store" />
@@ -21,8 +24,8 @@
         <header>
             <div class="container"> <!-- DIV CONTAINER -->
                 <div class="logo wow slideInLeft" data-wow-duration="1s" data-wow-delay="1s">
-                    <a href="index.html">
-                        <img src="images/logo-tag-topo.svg" alt="Logo tag topo">
+                    <a href="<?php bloginfo('url'); ?>">
+                        <img src="<?php bloginfo('template_url'); ?>/images/logo-tag-topo.svg" alt="Logo tag topo">
                     </a>
                 </div>
 

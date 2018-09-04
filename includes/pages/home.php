@@ -4,7 +4,7 @@
 
             <!--<div class="borda"></div>-->
             <div class="foto wow bounce" data-wow-duration="1s" data-wow-delay="5s">
-                <img src="images/foto-tag-miolo.png" alt="Foto tag miolo">
+                <img src="<?php bloginfo('template_url'); ?>/images/foto-tag-miolo.png" alt="Foto tag miolo">
             </div>
 
             <div class="icone-lapis wow flip" data-wow-duration="1s" data-wow-delay="1s">
