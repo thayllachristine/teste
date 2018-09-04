@@ -1,0 +1,50 @@
+@import organisms/sobre
+@import molecules/textos
+
+header
+	brackground:
+		image: url('../images/fundo-slide-pagina-inicial.jpg')
+		position: top center
+		repeat: no-repeat
+		color: $preto
+		attachment: fixed
+		size: cover
+		//size: 200px
+
+//minhas alterações
+
+.icone-lapis
+	+opacity(.5)
+	&:hover
+		+opacity(1)
+		transform: rotate(-45deg)
+		transition: .2s all ease-in-out
+		.fas.fa-pencil-alt
+			color: $verde
+			transform: rotate(400deg)
+
+.icone-codigo:hover
+		+opacity(.5)
+		transform: rotate(45deg)
+		transition: .2s all ease-in-out
+		.fas.fa-code
+			color: $azul
+			transform: rotate(315deg)
+
+.icone-coracao:hover
+	+opacity(.5)
+	transform: rotate(-45deg)
+	transition: .2s all ease-in-out
+	.fas.fa-heart
+		color: $laranja
+		transform: rotate(405deg)
+
+.icone-compartilhar
+	+opacity(.5)
+	&:hover
+		+opacity(1)
+		transform: rotate(45deg)
+		transition: .2s all ease-in-out
+		.fas.fa-share-alt
+			color: $preto
+			transform: rotate(315deg)
