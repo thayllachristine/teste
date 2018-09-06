@@ -21,6 +21,20 @@
     <?php include('includes/organisms/menu-responsivo.php'); ?>
     
     <div class="layout">
+
+        <style>
+            <?php if(get_the_post_thumbnail()) : ?>
+                header {
+                    background-image: url('<?php the_post_thumbnail_url(); ?>');
+                }
+            <?php else : ?>
+                header {
+                    background-image: url('<?php bloginfo('template_url'); ?>/images/fundo-slide-pagina-inicial.jpg');
+                }
+            <?php endif; ?>
+        </style>
+
+
         <header>
             <div class="container"> <!-- DIV CONTAINER -->
                 <div class="logo wow slideInLeft" data-wow-duration="1s" data-wow-delay="1s">
@@ -48,7 +62,8 @@
                     </ul>
                 </div>
 
-        <h1><?php echo $chamada; ?></h1>
+        <!--<h1><?php echo $chamada; ?></h1>-->
+        <h1><?php the_title('<strong>Quem</strong>'); ?></h1>
 
                 <p>Code // Share // Reboot</p>
             </div> <!-- FIM DIV CONTAINER -->

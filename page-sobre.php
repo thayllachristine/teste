@@ -1,4 +1,7 @@
 <?php
+	/*
+		Template Name: Sobre
+	*/
     $style = 'sobre';
     $chamada = '<strong>Quem</strong> sou <strong>Eu</strong>';
     include('header.php');
