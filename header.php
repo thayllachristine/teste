@@ -62,8 +62,7 @@
                     </ul>
                 </div>
 
-        <!--<h1><?php echo $chamada; ?></h1>-->
-        <h1><?php the_title('<strong>Quem</strong>'); ?></h1>
+        <h1><?php echo $chamada; ?></h1>
 
                 <p>Code // Share // Reboot</p>
             </div> <!-- FIM DIV CONTAINER -->
