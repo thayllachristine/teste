@@ -1,136 +1,27 @@
 <section class="portfolio">
     <div class="container">
-        <ul>
-            <li>
-                <figure class="imghvr-hinge-left">
-                    <img src="images/tairone1.jpeg" alt="Thumb">
-                    <figcaption>
-                        <a href="">
-                            <h3>Nome da Imagem</h3>
-                            <p>Efeito Hover</p>
-                        </a>
-                        <div class="overlay"></div>
-                    </figcaption>
-                </figure>
-            </li>
+       
+        <?php query_posts('post_type=post'); ?>
+            <ul>
+                
+                <?php while(have_posts()): the_post(); ?>
 
-            <li>
-                <figure class="imghvr-blur">
-                    <img src="http://placekitten.com/430/220" alt="Thumb">
-                    <figcaption>
-                        <a href="">
-                            <h3>Nome da Imagem</h3>
-                            <p>Efeito Hover</p>
-                        </a>
-                        <div class="overlay"></div>
-                    </figcaption>
-                </figure>
-            </li>
+                    <li>
+                        <figure class="imghvr-blur">
+                            <img src="<?php the_post_thumbnail_url('portfolio-thumb'); ?>" alt="Thumb">
+                            <figcaption>
+                                <a href="<?php the_post_thumbnail_url('large'); ?>" data-lightbox="roadtrip" data-title="<?php the_content(); ?>">
+                                    <h3><?php the_title(); ?></h3>
+                                    <p><?php the_content(); ?></p>
+                                </a>
+                                <div class="overlay"></div>
+                            </figcaption>
+                        </figure>
+                    </li>
 
-            <li>
-                <figure class="imghvr-zoom-out-flip-horiz">
-                    <img src="http://placekitten.com/g/430/220" alt="Thumb">
-                    <figcaption>
-                        <a href="">
-                            <h3>Nome da Imagem</h3>
-                            <p>Efeito Hover</p>
-                        </a>
-                        <div class="overlay"></div>
-                    </figcaption>
-                </figure>
-            </li>
+                <?php endwhile; ?>                                    
+            </ul>
+        <?php wp_reset_query(); ?>
 
-            <li>
-                <figure class="imghvr-blur">
-                    <img src="http://placekitten.com/430/220" alt="Thumb">
-                    <figcaption>
-                        <a href="">
-                            <h3>Nome da Imagem</h3>
-                            <p>Efeito Hover</p>
-                        </a>
-                        <div class="overlay"></div>
-                    </figcaption>
-                </figure>
-            </li>
-
-            <li>
-                <figure class="imghvr-zoom-out-flip-horiz">
-                    <img src="http://placekitten.com/g/430/220" alt="Thumb">
-                    <figcaption>
-                        <a href="">
-                            <h3>Nome da Imagem</h3>
-                            <p>Efeito Hover</p>
-                        </a>
-                        <div class="overlay"></div>
-                    </figcaption>
-                </figure>
-            </li>
-
-            <li>
-                <figure class="imghvr-blur">
-                    <img src="http://placekitten.com/430/220" alt="Thumb">
-                    <figcaption>
-                        <a href="">
-                            <h3>Nome da Imagem</h3>
-                            <p>Efeito Hover</p>
-                        </a>
-                        <div class="overlay"></div>
-                    </figcaption>
-                </figure>
-            </li>
-
-            <li>
-                <figure class="imghvr-zoom-out-flip-horiz">
-                    <img src="http://placekitten.com/g/430/220" alt="Thumb">
-                    <figcaption>
-                        <a href="">
-                            <h3>Nome da Imagem</h3>
-                            <p>Efeito Hover</p>
-                        </a>
-                        <div class="overlay"></div>
-                    </figcaption>
-                </figure>
-            </li>
-
-            <li>
-                <figure class="imghvr-blur">
-                    <img src="http://placekitten.com/430/220" alt="Thumb">
-                    <figcaption>
-                        <a href="">
-                            <h3>Nome da Imagem</h3>
-                            <p>Efeito Hover</p>
-                        </a>
-                        <div class="overlay"></div>
-                    </figcaption>
-                </figure>
-            </li>
-
-            <li>
-                <figure class="imghvr-zoom-out-flip-horiz">
-                    <img src="http://placekitten.com/g/430/220" alt="Thumb">
-                    <figcaption>
-                        <a href="">
-                            <h3>Nome da Imagem</h3>
-                            <p>Efeito Hover</p>
-                        </a>
-                        <div class="overlay"></div>
-                    </figcaption>
-                </figure>
-            </li>
-
-            <li>
-                <figure class="imghvr-blur">
-                    <img src="http://placekitten.com/430/220" alt="Thumb">
-                    <figcaption>
-                        <a href="">
-                            <h3>Nome da Imagem</h3>
-                            <p>Efeito Hover</p>
-                        </a>
-                        <div class="overlay"></div>
-                    </figcaption>
-                </figure>
-            </li>
-                                
-        </ul>               
     </div>
 </section>
