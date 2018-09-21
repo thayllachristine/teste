@@ -1,5 +1,12 @@
 <section class="contato">
     <div class="container">
+        
+
+        <?php
+            the_post();
+             the_content();
+        ?>
+
         <form>
             <div class="cols">
                 <div class="col">
@@ -31,6 +38,8 @@
                      </div>
                 </div>
 
+            </div>
+
                  <div class="form-group">
                      <textarea placeholder="Preencha suas dúvidas"></textarea>
                  </div>
@@ -38,7 +47,7 @@
                  <div class="form-group">
                     <button class="botao medio"><i class="fas fa-arrow-right"></i> Enviar Contato</button>
                  </div>
-            </div>
+
 
             <p class="text-success"><i class="fas fa-info-circle"></i> Seu contato foi enviado com sucesso!</p>
             <p class="text-danger"><i class="fas fa-info-circle"></i> Preencha todos os campos obrigatórios.</p>

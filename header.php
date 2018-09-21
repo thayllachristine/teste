@@ -18,6 +18,7 @@
     <!-- Controlador de cache, retirar quando acabar o desenvolvimento -->
     <meta http-equiv="Cache-Control" content="no-store" />
     
+    <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
 
