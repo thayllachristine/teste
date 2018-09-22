@@ -7,11 +7,18 @@
     
     <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
 
-    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/<?php echo $style; ?>.css">
+    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/<?php global $style; echo $style; ?>.css">
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/geral.css">
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/bower_components/wow/css/libs/animate.css">
 
-    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/bower_components/lightbox2/dist/css/lightbox.min.css">
+    <?php if(is_front_page()) : ?>
+        <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/bower_components/slick-carousel/slick/slick-theme.css">
+        <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/bower_components/slick-carousel/slick/slick.css">
+    <?php endif; ?>
+
+    <?php if(is_page('portfolio')) : ?>
+        <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/bower_components/lightbox2/dist/css/lightbox.min.css">
+    <?php endif; ?>
 
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/plugins.css">
 
@@ -66,9 +73,39 @@
                     </ul>
                 </div>
 
-        <h1><?php echo $chamada; ?></h1>
+                <div class="slide">
+                    
+                    <?php query_posts('post_type=slide'); ?>
+                        <?php while(have_posts()): the_post(); ?>
 
-                <p>Code // Share // Reboot</p>
+                            <div class="item">
+                                <h1><?php the_title(); ?></h1>
+
+                                <p><?php the_content(); ?></p>                     
+                            </div>
+
+                            <div class="item">
+                                <h1><?php echo $chamada; ?></h1>
+
+                                <p>Code // Share // Reboot</p>
+                            </div>
+
+                            <div class="item">
+                                <h1>Chamada 3 HTML5</h1>
+
+                                <p>Code // Share // Reboot</p>
+                            </div>
+
+                            <div class="item">
+                                <h1>Chamada 4 HTML5</h1>
+
+                                <p>Code // Share // Reboot</p>
+                            </div>
+
+                        <?php endwhile; ?>
+                    <?php wp_reset_query(); ?>
+                </div>
+
             </div> <!-- FIM DIV CONTAINER -->
         </header>
 
